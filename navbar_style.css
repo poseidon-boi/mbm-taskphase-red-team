@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+}
+
+.navbar{
+    background-color: rgb(222, 177, 222);
+    color: rgb(58, 2, 110);
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0rem 1rem;
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.links{
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
+    width: auto;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0 auto 1rem auto;
+}
+
+.links li{
+    position: relative;
+    width: auto;
+}
+
+.links a{
+    color: black;
+    padding: 0.5rem 1rem;
+    font: inherit;
+    cursor: pointer;
+    width: 100%;
+}
+
+.ddown{
+    background: none;
+    border: none;
+    color: black;
+    font: inherit;
+    cursor: pointer;
+    padding: 0rem 1rem;
+}
+
+.ddown_content{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: max-content;
+    background-color: rgb(223, 105, 223);
+    list-style: none;
+    text-align: left;
+    display: none;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.ddown_content a{
+    display: block;
+    padding: 0.5rem 1rem;
+    color: black;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.ddown_content a:hover{
+    background-color: plum;
+    text-decoration: none;
+}
+
+.links li:hover .ddown_content, 
+.links li:focus-within .ddown_content{
+    display: flex;
+}
