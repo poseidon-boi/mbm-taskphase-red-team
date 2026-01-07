@@ -1,12 +1,13 @@
-<!DOCTYPE.html>
+<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Landing Page">
     <title>Red-Team (2025-26)</title>
     <link rel="icon" href="https://static.igem.wiki/teams/5645/wiki-images/navbar/mbm-logo-favicon.webp">
     <link rel="license" href="#">
     <link rel="stylesheet" href="navbar_style.css">
+    <link rel="stylesheet" href="lnd_mode.css">
 </head>
 
 <body>
@@ -68,8 +69,19 @@
                     </ul>
                 </li>
             </ul>
-        </nav>
+            <ul class="lnd_toggle" id="page_theme">
+                <li>
+                    <button id="theme-toggle">
+                        <div class="toggle">
+                        <img src="light-mode-svgrepo-com.png" alt="Light mode" class="light-mode-icon">
+                        <img src="dark-mode-night-moon-svgrepo-com.png" alt="Dark mode" class="dark-mode-icon">
+                        </div>
+                    </button>
+                </li>
+            </ul>
+      </nav>
     </header>
-    
+<script src="lnd_mode.js"></script>    
 </body>
 </html>
+
