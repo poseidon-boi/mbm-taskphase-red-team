@@ -1,0 +1,15 @@
+footer{
+    background: rgb(173, 224, 64);
+    color: black;
+    font-size: 0.75rem;
+    padding: 0.6rem;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+small{
+    font-family: inherit;
+    font-size: 1rem;
+}
