@@ -28,4 +28,9 @@ body.dark #content {
     flex-direction: column;
     color: aliceblue;
 }
-  
+
+@media (max-width: 768px) {
+    body{
+        min-height: 100svh;
+    }
+}
