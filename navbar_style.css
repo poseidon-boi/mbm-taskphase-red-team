@@ -11,6 +11,7 @@ body{
     margin: 0;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
@@ -122,7 +123,6 @@ main {
     }
 
     body{
-        min-height: 100svh;
         overflow-x: hidden;
         overflow-y: auto;
     }
