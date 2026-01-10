@@ -1,9 +1,9 @@
 body {
     margin: 0;  
     background-image: url("fern.png");
-    background-size: cover;
+    background-size:cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
 
 #content {
@@ -28,7 +28,4 @@ body.dark #content {
 }
 
 @media (max-width: 768px) {
-    body{
-        min-height: 100svh;
-    }
 }
