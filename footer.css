@@ -15,10 +15,6 @@ small{
 }
 
 @media (max-width: 768px) {
-    footer{
-        max-width: 100%;
-    }
-
     small{
         font-size: 1rem;
     }
