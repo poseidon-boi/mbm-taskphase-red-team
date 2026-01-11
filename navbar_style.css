@@ -4,6 +4,9 @@
 
 html, body{
     margin:0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body{
@@ -11,6 +14,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100svh;
+    overflow-x: hidden;
 }
 
 main {
@@ -44,6 +48,7 @@ main {
     font-size: 1.3rem;
     text-align: center;
     margin: 0 auto 1rem auto;
+    overflow-x: hidden;
 }
 
 .links li{
@@ -123,12 +128,15 @@ main {
 
 @media (max-width: 768px) {
     main {
-        padding: 1rem;
+        display: block;
+        padding: 0 1rem;
     }
 
     body{
         overflow-x: hidden;
         overflow-y: auto;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .navbar {
@@ -154,6 +162,13 @@ main {
         display: flex;
     }
 
+    .links, .links.active {
+         width: 100%; 
+        max-width: 100%;
+        left: 0;
+        right: 0;
+    }
+
     .links li{
         position:relative;
         width: 100%; 
@@ -172,6 +187,8 @@ main {
     .ddown_content {
         display: none; 
         position: static;
+        width: 100%; 
+        box-sizing: border-box;
     }
 
     .ddown.open + .ddown_content {
@@ -198,6 +215,10 @@ main {
     .links li:hover .ddown_content,
   .links li:focus-within .ddown_content {
     display: none;
+  }
+
+  #content {
+    width: 100%;
   }
 
 }

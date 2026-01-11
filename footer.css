@@ -15,7 +15,25 @@ small{
     font-size: 1rem;
 }
 
+.navbar, footer {
+    width: 100;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
+    *{
+        max-width: 100%;
+    box-sizing: border-box;
+    }
+
+    main,
+  nav,
+  footer {
+    width: 100%;
+    overflow-x: hidden;
+  } 
+  
     small{
         font-size: 1rem;
     }
