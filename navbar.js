@@ -7,7 +7,8 @@ hamburger.addEventListener("click", () => {
 });
 
 ddown_open.forEach(button => {
-    button.addEventListener("click",() => {
+    button.addEventListener("click",(e) => {
+        e.stopPropagation();
     button.classList.toggle("open");
 });
 });

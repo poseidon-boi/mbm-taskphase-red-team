@@ -48,9 +48,13 @@ body.dark .toggle {
 
 @media (max-width: 768px) {
     #page_theme{
-        width: 20px;
-        height: 20px;
+        margin: 0;
         padding: 0;
-        padding-bottom: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    #page_theme img{
+        width: 2rem;
+        height: 2rem;
     }
 }
