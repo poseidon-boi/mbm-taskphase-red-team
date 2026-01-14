@@ -170,7 +170,7 @@ header{
         display: none;
         flex-direction: column;
         z-index: 9999;
-        background-color:  rgb(173, 224, 64);
+        background-color:  #0262a2;
     }
 
     .links.active {
@@ -215,7 +215,7 @@ header{
 
     .ddown.open + .ddown_content {
         display: block;
-        background-color:  rgb(173, 224, 64);
+        background-color:  #4c7fa1;
     }
 
     .hamburger {
