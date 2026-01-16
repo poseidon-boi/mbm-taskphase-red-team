@@ -1,9 +1,10 @@
 body {
   margin: 0;
-  background-image: url("rippled_water.jpg");
+  background-image: url("water-background.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
+  backdrop-filter: blur(4px);
 }
 
 #content {
