@@ -91,7 +91,7 @@ const members = [
     name: "Samriddhi Pandey",
     img: "Samriddhi_casual.jpeg",
     exImg: "Samriddhi_baby.jpeg",
-    quote: "Send a quote guys.",
+    quote: "Life went Error 404, guys - send help.",
     subsystem: "Hardware & Software, Web Development",
     color: "#00f7ff",
   },
