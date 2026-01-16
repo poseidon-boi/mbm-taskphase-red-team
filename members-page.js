@@ -59,7 +59,7 @@ const members = [
     name: "Rupanshi Oberoi",
     img: "Rupanshi_casual.jpeg",
     exImg: "Rupanshi_baby.jpeg",
-    quote: "Send a quote guys.",
+    quote: "Runs on curiosity and overthinking.",
     subsystem: "Research, Human Practices",
     color: "#8651e7",
   },
