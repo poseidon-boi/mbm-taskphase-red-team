@@ -76,10 +76,18 @@ body.dark .member-page{
 }
 
 #quote {
-    margin-top: 1rem;
+    margin-top: 0.7rem;
     font-style: italic;
     color: #555;
     max-width: 26rem;
+    font-size: 1rem;
+}
+
+#subsystem {
+    max-width: 30rem;
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 0;
 }
 
 body.dark #quote {
