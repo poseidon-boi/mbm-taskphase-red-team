@@ -20,6 +20,13 @@ main {
   padding-top: 5.5rem;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+}
+
 .navbar {
   background-color: #003151;
   justify-content: center;
@@ -29,12 +36,9 @@ main {
   display: flex;
   width: 100%;
   box-sizing: border-box;
-  z-index: 1000;
+  z-index: 9999;
   height: auto;
   overflow: visible;
-  position: fixed;
-  top: 0;
-  z-index: 9999;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
