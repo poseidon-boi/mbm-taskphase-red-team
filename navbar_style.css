@@ -1,13 +1,11 @@
-* {
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
 html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: clip;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-weight: 700;
 }
 
 .main-content {
@@ -15,6 +13,7 @@ body {
   grid-template-columns: 1fr 3fr;
   column-gap: 2rem;
   grid-auto-flow: dense;
+  padding-top: 4rem;
 }
 
 header {
@@ -33,7 +32,11 @@ header {
   z-index: 1000;
   height: auto;
   overflow: visible;
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .links {
@@ -59,7 +62,7 @@ header {
 .links a {
   color: rgb(255, 255, 255);
   padding: 0.5rem 1rem;
-  font: inherit;
+  font-family: inherit;
   cursor: pointer;
   width: 100%;
 }
@@ -68,9 +71,10 @@ header {
   background: none;
   border: none;
   color: rgb(255, 255, 255);
-  font: inherit;
+  font-family: inherit;
   cursor: pointer;
   padding: 0rem 1rem;
+  font-size: 2rem;
 }
 
 .ddown_content {
@@ -122,6 +126,10 @@ header {
   display: none;
 }
 
+h2 {
+  font-weight: 700;
+}
+
 @media (max-width: 768px) {
   main {
     display: block;
@@ -139,7 +147,11 @@ header {
     flex-direction: column;
     align-items: flex-start;
     text-align: center;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
   }
 
   .homepage img {
