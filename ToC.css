@@ -45,8 +45,7 @@
 }
 
 .aside li a.active {
-  transform: scale(1.1);
-  border-bottom: #111;
+  transform: scale(1.26);
 }
 
 .aside li a:hover {
