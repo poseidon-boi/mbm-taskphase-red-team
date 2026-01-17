@@ -75,7 +75,7 @@ header {
   font-family: inherit;
   cursor: pointer;
   padding: 0rem 1rem;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 .ddown a {
@@ -127,12 +127,32 @@ header {
   text-align: center;
 }
 
+#content {
+  font-size: 1.5rem;
+}
+
+#content a {
+  color: rgb(0, 35, 140);
+}
+
+#content a:hover {
+  color: grey;
+}
+
 .hamburger {
   display: none;
 }
 
 h2 {
   font-weight: 700;
+}
+
+.references {
+  text-align: left;
+}
+
+.references li {
+  font-weight: 300;
 }
 
 @media (max-width: 768px) {
