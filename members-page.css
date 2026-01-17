@@ -70,15 +70,15 @@ body.dark .member-page {
 
 #member-name {
   margin-top: 1.2rem;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
 }
 
 #quote {
-  margin-top: 0.7rem;
+  margin-top: 0.2rem;
   font-style: italic;
   color: #555;
   max-width: 26rem;
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 #subsystem {
@@ -86,6 +86,8 @@ body.dark .member-page {
   font-size: 1.2rem;
   color: black;
   margin-bottom: 0;
+  font-size: 2rem;
+  margin-top: 0;
 }
 
 body.dark #subsystem {
@@ -111,7 +113,9 @@ body.dark #quote {
   border: 2px solid white;
   cursor: pointer;
 
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .member-buttons button.active {
