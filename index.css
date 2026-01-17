@@ -51,16 +51,7 @@ html {
   align-items: start;
 }
 
-.scroll-indicator {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  z-index: 3;
-  animation: bounce 2s infinite;
-  display: none;
-}
+
 
 .scroll-section {
   height: 80vh;

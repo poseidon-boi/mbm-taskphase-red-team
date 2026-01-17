@@ -3,9 +3,13 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: clip;
+  overflow: visible;
   font-family: "Saira Extra Condensed", sans-serif;
   font-weight: 700;
+}
+
+main {
+  overflow-x: clip;
 }
 
 .main-content {
@@ -13,11 +17,7 @@ body {
   grid-template-columns: 1fr 3fr;
   column-gap: 2rem;
   grid-auto-flow: dense;
-  padding-top: 4rem;
-}
-
-header {
-  overflow: visible;
+  padding-top: 5.5rem;
 }
 
 .navbar {
@@ -34,9 +34,7 @@ header {
   overflow: visible;
   position: fixed;
   top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1000;
+  z-index: 9999;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -125,10 +123,11 @@ header {
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-size: 1.3rem;
+  text-align: left;
 }
-
-#content {
-  font-size: 1.5rem;
+#content h2 {
+  font-family: "Saira Extra Condensed", sans-serif;
 }
 
 #content a {

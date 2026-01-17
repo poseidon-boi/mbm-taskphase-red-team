@@ -3,12 +3,12 @@ const links = document.getElementById("links");
 const ddown_open = document.querySelectorAll(".ddown");
 
 hamburger.addEventListener("click", () => {
-    links.classList.toggle("active");
+  links.classList.toggle("active");
 });
 
-ddown_open.forEach(button => {
-    button.addEventListener("click",(e) => {
-        e.stopPropagation();
+ddown_open.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.stopPropagation();
     button.classList.toggle("open");
-});
+  });
 });
