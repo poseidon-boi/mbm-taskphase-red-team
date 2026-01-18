@@ -25,6 +25,10 @@ body {
   padding-top: 5.5rem;
 }
 
+#content-hp p {
+  max-width: 75%;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -34,9 +38,12 @@ header {
 
 #content img {
   max-width: 50%;
+  left: 50%;
 }
 
-#content h3 {
+#content h3,
+h4,
+h5 {
   font-family: "Saira Extra Condensed", sans-serif;
   font-weight: 500;
 }

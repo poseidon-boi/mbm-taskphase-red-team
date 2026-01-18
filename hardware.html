@@ -115,101 +115,318 @@
         <div class="aside" id="aside"></div>
         <div id="content">
           <h2>Introduction</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            efficitur sapien in fringilla dapibus. Fusce commodo tincidunt
-            volutpat. Cras euismod ornare ornare. Donec elit sapien, sodales a
-            eros sed, tempus volutpat tellus. Cras at magna nisi. Vestibulum et
-            diam eu felis luctus posuere vitae non tortor. Vivamus at elit
-            commodo, rutrum tellus vel, volutpat tellus.
-          </p>
 
           <p>
-            ipsum sapien, vestibulum at ante non, euismod vehicula dui. Nunc
-            ornare tempor quam, sed scelerisque dolor. Vivamus sit amet
-            consequat felis, eu sollicitudin nulla. Phasellus id nisi quis erat
-            dictum aliquet. Vestibulum vulputate enim nec augue vulputate, et
-            interdum nunc ultricies. Ut lobortis quis diam ac accumsan. In
-            molestie tortor sed arcu vulputate tristique. In bibendum euismod
-            porta. Morbi ac venenatis erat. Curabitur consequat convallis purus
-            ac sagittis. Ut tempus ac erat at rutrum. Morbi dolor sapien,
-            fermentum nec ex et, ornare ullamcorper nisl.
+            To address this challenge of OCPS, we aim to develop a localized
+            filtration system designed to selectively capture and retain OCPs
+            from pre-treated water.
           </p>
+          <br />
+          <h3>System Architecture</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            efficitur sapien in fringilla dapibus. Fusce commodo tincidunt
-            volutpat. Cras euismod ornare ornare. Donec elit sapien, sodales a
-            eros sed, tempus volutpat tellus. Cras at magna nisi. Vestibulum et
-            diam eu felis luctus posuere vitae non tortor. Vivamus at elit
-            commodo, rutrum tellus vel, volutpat tellus.
+            The hardware pruposed is a all 3D-printed, field-deployable
+            filtration unit suitable for decentralized water remediation
+            applications. Let’s talk about the main structure. The whole filter
+            body is made from PETG, or Polyethylene Terephthalate Glycol .
+            PETG’s a solid choice as it holds up after lots of use, doesn’t
+            react with water, and doesn’t soak up oily stuff the way some
+            plastics do. Plus, it’s easy to print with, so making replacement
+            parts or new filters is pretty simple.
           </p>
 
+          <p>The system architecture includes:</p>
+          <h4>Inlet</h4>
           <p>
-            Aenean ipsum sapien, vestibulum at ante non, euismod vehicula dui.
-            Nunc ornare tempor quam, sed scelerisque dolor. Vivamus sit amet
-            consequat felis, eu sollicitudin nulla. Phasellus id nisi quis erat
-            dictum aliquet. Vestibulum vulputate enim nec augue vulputate, et
-            interdum nunc ultricies. Ut lobortis quis diam ac accumsan. In
-            molestie tortor sed arcu vulputate tristique. In bibendum euismod
-            porta. Morbi ac venenatis erat. Curabitur consequat convallis purus
-            ac sagittis. Ut tempus ac erat at rutrum. Morbi dolor sapien,
-            fermentum nec ex et, ornare ullamcorper nisl.
+            The inlet is placed vertically, which directs the incoming
+            pre-treated water into the filtration module with minimal turbulence
+            of an ideal flow of 0.1 to 0.5L/min and ensures uniform distribution
+            of flow across the active filter surface.
+          </p>
+
+          <h4>Half‑Trapezium Shaped Filter Mesh (Active Zone)</h4>
+          <p>
+            The geometry plays a critical role in the filter’s performance by
+            governing internal flow behavior. As organochlorine pesticides
+            (OCPs) are hydrophobic in nature, they tend to adhere to flat walls,
+            which means a flat horizontal filter mesh or the adsorption material
+            on the side walls will not be efficient enough to remove the OCPs in
+            water. To counter this problem, we have used a half-trapezium
+            geometry that disrupts boundary-layer formation and redirects flow
+            toward the mesh surface, ensuring repeated contact with the active
+            zone while minimizing unwanted wall adsorption.
+          </p>
+          <h4>Mesh Composition</h4>
+          <h5>PETG–PDA–CNF Filter Design</h5>
+          <p>
+            In this filter, we only functionalize the active mesh area-the side
+            walls stay plain PETG. That way, fibers don’t overlap with the walls
+            and mess up the structure.To make the surface treatment last, we
+            coat the PETG mesh with polydopamine (PDA). It’s a simple process:
+            just soak the mesh in a slightly basic dopamine solution. The PDA
+            forms a thin, even layer that sticks well, holds onto later
+            coatings, and doesn’t block the pores. Next, we dip-coat this PDA
+            layer with a dilute cellulose nanofiber (CNF) dispersion, then let
+            it dry gently. CNF works better than bacterial cellulose here
+            because it forms a thin, porous, and uniform coating-no need for
+            cutting or extra shaping. This CNF layer gives the filter a
+            high-surface-area, water-loving interface that still lets water pass
+            through easily. By layering like this, we separate the roles: PETG
+            gives the structure, PDA keeps the coatings in place, and CNF
+            handles filtration. The result is a filter that holds up for weeks
+            in pre-treated water (pH 6–8.5) without falling apart.
+          </p>
+
+          <h5>Curli Immobilization on CNF-Functionalized Mesh</h5>
+          <p>
+            We produce curli fibers separately and mix them with Chitosan beads
+            and MXene, and then attach them to the CNF-coated PETG mesh. The
+            process is pretty straightforward: hydrate the mesh, soak it in a
+            curli suspension for a bit, and let the curli naturally grab onto
+            the cellulose surface. Afterward, we rinse off anything that didn’t
+            stick. What’s left is a stable layer of curli fibers locked onto the
+            CNF. No need for harsh chemicals or extra steps. Curli just has a
+            natural pull to cellulose. The binding happens only on the CNF
+            surface, so the rest of the mesh-the PETG–PDA–CNF layers-stay
+            untouched. That keeps the pores open and the water flowing, while
+            the curli layer adds some biological action.
+          </p>
+
+          <h5>Capture Mechanism</h5>
+          <p>
+            Hydrodynamic flow inside the filter keeps organic micropollutants
+            (OCPs) from settling on the walls. OCPs present in the water stick
+            to the CNF–curli–chitosan surface. Hydrophobic interactions take
+            over, so the OCPs get adsorbed and stay put.
+          </p>
+
+          <h4>Sloped Base  </h4>
+          <p>
+            The base slopes gently-just 10 degrees. That’s enough to keep water
+            from pooling up and causing problems.
+          </p>
+
+          <h4>Outlet</h4>
+          <p>
+            After water moves through the mesh and down the slope, it heads for
+            the outlet. The outlet grabs the filtered water, keeps particles
+            from sneaking back in, and makes sure the flow stays steady.
+          </p>
+
+          <h4>Differential Pressure Sensor </h4>
+          <p>
+            There's one differential pressure sensor set up across the active
+            mesh. It keeps an eye on the pressure drop in real time. That way,
+            you know right away if contaminants break through or when the
+            media’s almost used up.
+          </p>
+          <p>ΔP = P inlet − P outlet</p>
+
+          <h2>Hardware DBTL Summary – OCP Filtration System</h2>
+          <h3>Design 1 : Vertical Mesh Concept</h3>
+          <p>
+            We started out by putting up a vertical filter mesh (pretty much the
+            usual approach), pulled straight from membrane filtration basics.
+            The material? PES–cellulose blends. But OCPs had other plans.
+            They're incredibly hydrophobic, so instead of sticking to the mesh,
+            they clung to the chamber walls. That built up stubborn boundary
+            layers, and fouling got out of hand fast, including the fact that we
+            will need to put additional flow sensors and pumps to maintain the
+            water flows throughout the system.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            vitae erat eget nisi porttitor volutpat in quis nulla. Nunc
-            fringilla laoreet rhoncus. Quisque at euismod ante. Nam egestas et
-            libero ut blandit. In ullamcorper elementum varius. Vivamus vel
-            hendrerit lacus. Sed ultrices magna quis neque ornare vestibulum.
-            Nulla efficitur velit id nisl sagittis, venenatis elementum lorem
-            lobortis.
+            So, just picking a different material didn’t fix things. Turns out,
+            how the water moves is just as important as what the filter’s made
+            of if you actually want to catch OCPs.
+          </p>
+
+          <h3>Design 2: Horizontal Mesh & Early 3D Printing</h3>
+          <p>
+            Next, we tried flipping the mesh to a horizontal setup, thinking it
+            might help with the hydraulic flow maintenance part, since in this
+            we were keeping the inlet on the top and outlet at the bottom, so
+            gravity would be enough to ensure water is flowing through the
+            filter. We also used PLA so we could 3D print prototypes quickly.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            vitae erat eget nisi porttitor volutpat in quis nulla. Nunc
-            fringilla laoreet rhoncus. Quisque at euismod ante. Nam egestas et
-            libero ut blandit. In ullamcorper elementum varius. Vivamus vel
-            hendrerit lacus. Sed ultrices magna quis neque ornare vestibulum.
-            Nulla efficitur velit id nisl sagittis, venenatis elementum lorem
-            lobortis.
+            That plan fell apart. PLA can’t really handle water after a while,
+            it starts to degrade. And those hydrophobic OCPs? Still glued
+            themselves to the chamber walls. Switching mesh direction didn’t do
+            the trick.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            vitae erat eget nisi porttitor volutpat in quis nulla. Nunc
-            fringilla laoreet rhoncus. Quisque at euismod ante. Nam egestas et
-            libero ut blandit. In ullamcorper elementum varius. Vivamus vel
-            hendrerit lacus. Sed ultrices magna quis neque ornare vestibulum.
-            Nulla efficitur velit id nisl sagittis, venenatis elementum lorem
-            lobortis.
+            Bottom line: We needed something tougher and more water-resistant,
+            and a design that forced water-plus those OCPs-off the walls. Just
+            turning the mesh wasn’t enough.
           </p>
+
+          <img
+            src="design-2-horizontal-mesh.jpeg"
+            alt="Horizontal mesh filtration prototype"
+          />
+          <figcaption>
+            Design 2: Horizontal PETG mesh configuration tested to improve
+            gravity-driven flow. Hydrophobic OCPs accumulated along chamber
+            walls, resulting in fouling.
+          </figcaption>
+
+          <h3>Final Design: Trapezium Mesh with PETG Architecture</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            vitae erat eget nisi porttitor volutpat in quis nulla. Nunc
-            fringilla laoreet rhoncus. Quisque at euismod ante. Nam egestas et
-            libero ut blandit. In ullamcorper elementum varius. Vivamus vel
-            hendrerit lacus. Sed ultrices magna quis neque ornare vestibulum.
-            Nulla efficitur velit id nisl sagittis, venenatis elementum lorem
-            lobortis.
+            So, for the final round, we went with a half-trapezium mesh made
+            from PETG, built the whole thing out of PETG, and then added some
+            smart coatings and layers-PDA, cellulose nanofibers, curli, and a
+            mix of adsorption materials-right where they’d actually make a
+            difference.
           </p>
+
+          <p>What changed?</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            vitae erat eget nisi porttitor volutpat in quis nulla. Nunc
-            fringilla laoreet rhoncus. Quisque at euismod ante. Nam egestas et
-            libero ut blandit. In ullamcorper elementum varius. Vivamus vel
-            hendrerit lacus. Sed ultrices magna quis neque ornare vestibulum.
-            Nulla efficitur velit id nisl sagittis, venenatis elementum lorem
-            lobortis.
+            PETG holds up against water and chemicals, no problem. The new
+            trapezium shape messes with the boundary layer and pushes water away
+            from the walls. It also has not-so-pointed edges so that make sure
+            there is no unwanted accumulation or overlapping of the curli fibers
+            we are using. All the functional layers keep fouling under control.
+            A sloped base and pressure sensors make it easy to watch what’s
+            going on.
           </p>
+          <p>The result?</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            vitae erat eget nisi porttitor volutpat in quis nulla. Nunc
-            fringilla laoreet rhoncus. Quisque at euismod ante. Nam egestas et
-            libero ut blandit. In ullamcorper elementum varius. Vivamus vel
-            hendrerit lacus. Sed ultrices magna quis neque ornare vestibulum.
-            Nulla efficitur velit id nisl sagittis, venenatis elementum lorem
-            lobortis.
+            We finally got the materials and water flow working together. OCPs
+            don’t just build up anywhere-they land exactly where we want, right
+            in the active zone, so swapping out the filter is easy.
           </p>
-          <h2>Impact</h2>
+
+          <img
+            src="final-filter-design.jpeg"
+            alt="Final trapezium-shaped PETG filter design"
+          />
+          <figcaption>
+            Final half-trapezium PETG filter architecture with PDA–CNF coating
+            and curli-functionalized active zone for controlled flow and
+            minimized wall adsorption.
+          </figcaption>
+
+          <h2>Cost</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Supplier / Source</th>
+                <th>Estimated Cost (₹)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PETG Filament (1 kg)</td>
+                <td>Robu.in / Amazon India / local shops</td>
+                <td>800–1,200</td>
+              </tr>
+              <tr>
+                <td>Dopamine Hydrochloride (5 g)</td>
+                <td>Sigma-Aldrich India / Merck / HiMedia</td>
+                <td>2,500–3,500</td>
+              </tr>
+              <tr>
+                <td>Cellulose Nanofibers (CNF)</td>
+                <td>Sigma / Merck / SRL India</td>
+                <td>3,000–6,000</td>
+              </tr>
+              <tr>
+                <td>Chitosan Beads</td>
+                <td>HiMedia / Merck India</td>
+                <td>800–1,500</td>
+              </tr>
+              <tr>
+                <td>
+                  MXene (Ti<sub>3</sub>C<sub>2</sub>T<sub>x</sub>, 100–200 mg)
+                </td>
+                <td>TCI / Sigma India (special order)</td>
+                <td>3,000–7,000</td>
+              </tr>
+              <tr>
+                <td>Curli Fibers (lab production)</td>
+                <td><i>E. coli</i> K-12 / MTCC access</td>
+                <td>2,000–4,000</td>
+              </tr>
+              <tr>
+                <td>Peristaltic Pump</td>
+                <td>Robu.in / Amazon India / DigiKey</td>
+                <td>2,000–3,000</td>
+              </tr>
+              <tr>
+                <td>Differential Pressure Sensor (MPXV7002DP)</td>
+                <td>Robu.in / Amazon India / DigiKey</td>
+                <td>1,200–1,800</td>
+              </tr>
+              <tr>
+                <td>Consumables (ethanol, buffers, tubing, gloves)</td>
+                <td>Merck / HiMedia / local suppliers</td>
+                <td>1,000–1,800</td>
+              </tr>
+              <tr>
+                <td><strong>Total Estimated Cost</strong></td>
+                <td>India, UG lab scale</td>
+                <td><strong>16,500–29,600</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="refs">
+            <hr />
+            <p>
+              <small>
+                Vendor pricing accessed from Indian scientific suppliers and
+                electronics distributors (2025–2026).
+              </small>
+            </p>
+          </div>
+
+          <small>
+            Cost estimates may vary depending on supplier availability,
+            shipping, and institutional procurement policies.
+          </small>
+
+          <h2>References</h2>
+          <div class="refs">
+            <hr />
+            <p>
+              <small>
+                Bink, L. R., & Furey, J. (2010). Using in-line disposable
+                pressure sensors to evaluate depth filter performance.
+                <i>BioProcess International, 8</i>(2), 44–50.
+              </small>
+            </p>
+
+            <p>
+              <small>
+                Hammar, M., Bian, Z., & Normark, S. (1995). Nucleator-dependent
+                intercellular assembly of adhesive curli organelles in
+                <i>Escherichia coli</i>.
+                <i>Proceedings of the National Academy of Sciences, 92</i>(12),
+                5407–5411. https://doi.org/10.1073/pnas.92.12.5407
+              </small>
+            </p>
+
+            <p>
+              <small>
+                Lee, H., Dellatore, S. M., Miller, W. M., & Messersmith, P. B.
+                (2007). Mussel-inspired surface chemistry for multifunctional
+                coatings.
+                <i>Science, 318</i>(5849), 426–430.
+                https://doi.org/10.1126/science.1147241
+              </small>
+            </p>
+
+            <p>
+              <small>
+                Zhang, C., Gong, L., Xiang, L., Du, Y., Hu, W., Zeng, H., & Xu,
+                Z. (2017). Polydopamine nanocoating on cellulose nanofiber film
+                and its multifunctional applications.
+                <i>Carbohydrate Polymers, 175</i>, 240–247.
+                https://doi.org/10.1016/j.carbpol.2017.07.070
+              </small>
+            </p>
+          </div>
         </div>
       </div>
     </main>
