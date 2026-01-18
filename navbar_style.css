@@ -131,11 +131,12 @@ header {
 .contacts-list li {
   list-style: none;
   place-items: center;
+  padding: 2rem;
 }
 
 .contacts-list li img {
-  height: 50%;
-  width: 50%;
+  height: 100%;
+  width: 100%;
 }
 
 #content {

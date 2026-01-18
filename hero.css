@@ -38,6 +38,15 @@ body.dark #content {
   color: black;
 }
 
+#content hr {
+  border: none;
+  border-top: 1px solid #000000;
+  height: 0;
+  margin: 0;
+  width: 100%;
+  border-radius: 0;
+}
+
 .hero-section {
   font-size: 15rem;
 }
