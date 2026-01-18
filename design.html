@@ -27,9 +27,7 @@
   <body>
     <header>
       <nav class="navbar">
-        <a href="index.html" class="homepage"
-          ><img src="icons8-home-50.png"
-        /></a>
+        <a href="index.html" class="homepage"><img src="mascot.png" /></a>
         <button class="hamburger" id="hamburger">
           <span></span>
           <span></span>
@@ -117,13 +115,12 @@
           <h2>Introduction</h2>
           <p>
             Curli fibers are extracellular amyloid proteins naturally produced
-            by E. coli that self-assemble into robust fibrous networks. Because
-            curli fibers are secreted outside the cell and remain stable after
-            cell lysis, they are an ideal biological scaffold for creating
-            non-living, functional biomaterials. In this project, we aimed to
-            engineer curli fibers to interface effectively with MXene, a
-            negatively charged two-dimensional nanomaterial, and to integrate
-            them into a composite filtration system for the removal of
+            by E. coli that self-assemble into strong fibrous networks. Since
+            these are secreted outside the cell and remain stable after cell
+            lysis, they are an ideal biological scaffold. In this project, we
+            aimed to engineer curli fibers to bind effectively with MXene which
+            is a negatively charged two-dimensional nanomaterial, and to
+            integrate them into a composite filtration system for the removal of
             organochlorine pesticides (OCPs) from water.
           </p>
           <p>
@@ -133,80 +130,171 @@
             charged at physiological pH, enabling strong electrostatic
             attraction to the negatively charged surface terminations of MXene.
           </p>
-          <h2>Genetic Construct Design</h2>
-          <p>
-            The engineered construct was designed with the following
-            architecture:
-            <br />
-            PcsgA → RBS → csgA → GSGSGS linker → K8 tag → BBa_B0015 terminator
-          </p>
-          <ul>
-            <li>
-              PcsgA promoter: <br />
-              The native curli promoter was used to ensure expression under
-              curli-inducing conditions, maintaining physiological relevance and
-              minimizing metabolic burden.
-            </li>
-            <li>
-              Ribosome Binding Site (RBS):<br />
-              A standard bacterial RBS was included to ensure efficient
-              translation initiation.
-            </li>
-            <li>
-              csgA coding sequence: <br />
-              Encodes the major structural subunit of curli fibers.
-            </li>
-            <li>
-              GSGSGS flexible linker: <br />
-              A short glycine-serine-rich linker was inserted to spatially
-              separate CsgA from the lysine tag, reducing steric interference
-              and preserving proper curli fiber assembly.
-            </li>
-            <li>
-              K8 poly-lysine tag: <br />
-              Eight lysine residues were appended to the C-terminus of CsgA to
-              enhance electrostatic binding to MXene. K8 was chosen to increase
-              surface charge while minimizing risks of aggregation or secretion
-              defects that can occur with longer poly-lysine sequences.
-            </li>
-            <li>
-              BBa_B0015 terminator:<br />
-              A standard double terminator was included to ensure reliable
-              transcriptional termination and prevent read-through into
-              downstream sequences.
-            </li>
-          </ul>
-          <figure>
-            <img src="plasmiddesign1.jpeg" alt="Plasmid Design" />
-            <figcaption class="figure">Figure 1: Plasmid Design</figcaption>
-          </figure>
-          <h3>Gibson Assembly and Transformation strategy:</h3>
-          <p>
-            The final engineered plasmid, pSB1C3_PcsgA_CsgA-K8, should encode a
-            lysine-functionalized curli subunit that can self-assemble into
-            fibers that are capable of linking with MXene. This design would
-            help produce a cell-free component that can be integrated with
-            chitosan and chitin into composite filtration films for
-            environmental remediation. <br />
-            Gibson Assemble can be used as a cloning technique here. In this
-            approach, the curli expression cassette (PcsgA-csgA-K8-BBa_B0015)
-            and the pSB1C3 backbone will be amplified using PCR with the help of
-            primers, introducing overlapping homologous regions. These fragments
-            will then be assembled in a single isothermal reaction that will
-            ensure its precise and efficient construction. <br />
-            Now, the recombinant plasmid can be introduced into the competent
-            Escherichia coli DH5α cells via heat-shock transformation. DH5α has
-            a high transformation efficiency and suitability for plasmid
-            propagation and sequence verification. Positive clones will be
-            identified through antibiotic selection and further confirmed by
-            restriction analysis and sequencing. Then the plasmid will be
-            transformed into a curli-producing E. coli K-12 strain for
-            downstream curli fiber expression and other functional assays.
-            <br />
-          </p>
+          <section id="construct-design">
+            <h2>Construct Design (pET-22b–csgA)</h2>
+
+            <p>
+              The pET-22b(+) expression vector was used to construct a plasmid
+              encoding the
+              <em>csgA</em> gene under the control of a T7 promoter for
+              inducible expression in <em>Escherichia coli</em>. This vector was
+              selected due to its strong, well-characterized T7-based expression
+              system and compatibility with downstream protein purification.
+            </p>
+
+            <h3>Genetic Elements of the Construct</h3>
+
+            <p>
+              The final construct consists of the following elements in order:
+            </p>
+
+            <ol>
+              <li>
+                T7 Promoter:<br />
+                Drives high-level transcription in <em>E. coli</em> strains
+                expressing T7 RNA polymerase.
+              </li>
+
+              <li>
+                Ribosome Binding Site (RBS):<br />
+                Ensures efficient translation of the downstream gene.
+              </li>
+
+              <li>
+                <em>csgA</em> Coding Sequence:<br />
+                Encodes CsgA, the major structural subunit of curli amyloid
+                fibers.
+              </li>
+
+              <li>
+                C-terminal 6×His Tag:<br />
+                Fused in-frame to <em>csgA</em> to enable purification via
+                nickel affinity chromatography (Ni-NTA).
+              </li>
+
+              <li>
+                T7 Terminator:<br />
+                Signals proper termination of transcription and improves mRNA
+                stability.
+              </li>
+
+              <li>
+                Ampicillin Resistance Gene (AmpR):<br />
+                Provides antibiotic selection to identify cells carrying the
+                plasmid.
+              </li>
+
+              <li>
+                ColE1 Origin of Replication:<br />
+                Allows stable replication of the plasmid in <em>E. coli</em>.
+              </li>
+            </ol>
+
+            <h3>Gibson Assembly Procedure for pET-22b–csgA</h3>
+
+            <p>
+              The <em>csgA</em> gene was assembled into the pET-22b(+) vector
+              using Gibson Assembly. The insert was designed in Benchling with
+              homologous overlaps to the vector multiple cloning site (MCS),
+              ensuring correct orientation and in-frame fusion with the
+              C-terminal 6×His tag.
+            </p>
+
+            <h4>Fragment Design (Benchling)</h4>
+
+            <p>Two DNA fragments were used:</p>
+
+            <ol>
+              <li>
+                pET-22b(+) Backbone:<br />
+                The vector was linearized <em>in silico</em> at the MCS region
+                and retained:
+                <ul>
+                  <li>T7 promoter</li>
+                  <li>Ribosome binding site</li>
+                  <li>C-terminal 6×His tag</li>
+                  <li>T7 terminator</li>
+                  <li>Ampicillin resistance gene (AmpR)</li>
+                  <li>ColE1 origin of replication</li>
+                </ul>
+              </li>
+
+              <li>
+                <em>csgA</em> Insert:<br />
+                The <em>csgA</em> coding sequence was PCR-amplified. Primers
+                were designed in Benchling to introduce:
+                <ul>
+                  <li>
+                    5′ overlap homologous to the vector region upstream of the
+                    MCS
+                  </li>
+                  <li>
+                    3′ overlap homologous to the region immediately upstream of
+                    the 6×His tag
+                  </li>
+                </ul>
+              </li>
+            </ol>
+
+            <figure>
+              <img
+                src="pet22b-csgA-sequence-1.png"
+                alt="Image on BIND MECHANISM"
+              />
+              <figcaption class="figure">
+                Figure 2: Plasmid Design (pET22b–csgA)
+              </figcaption>
+            </figure>
+
+            <p>
+              These homologous overlaps enabled seamless Gibson Assembly. To
+              ensure that the
+              <em>csgA</em> insert remained in-frame with the plasmid, two
+              additional nucleotides (T and A) were introduced immediately after
+              the MCS. This prevented a frameshift at the vector–insert junction
+              and preserved the correct reading frame, allowing continuous
+              translation from the upstream start codon through the
+              <em>csgA</em>
+              coding sequence, beginning with its N-terminal methionine.
+            </p>
+
+            <p>
+              Benchling’s translation and frame visualization tools were used to
+              confirm correct amino acid translation across the vector–insert
+              junction.
+            </p>
+
+            <h4>In Silico Gibson Assembly</h4>
+
+            <p>Benchling’s Gibson Assembly tool was used to:</p>
+
+            <ul>
+              <li>
+                Simulate assembly of the linearized pET-22b(+) backbone with the
+                PCR-amplified <em>csgA</em> insert
+              </li>
+              <li>Confirm correct orientation and junction sequences</li>
+              <li>
+                Verify that the final plasmid contained all intended genetic
+                elements in the correct order
+              </li>
+            </ul>
+
+            <p>
+              Following <em>in silico</em> design and Gibson Assembly, the
+              assembled pET-22b–<em>csgA</em> plasmid will be transformed into
+              an <em>Escherichia coli</em> K-12 strain for cloning and plasmid
+              propagation. K-12 strains were selected due to their genetic
+              stability and lack of T7 RNA polymerase, preventing unintended
+              expression of <em>csgA</em>
+              during the cloning stage. Transformants will be selected on
+              ampicillin-containing agar and used for downstream verification.
+            </p>
+          </section>
+
           <h2>Proposed Approach Using Synthetic Biology</h2>
           <p>
-            Our project employs the Biofilm-Integrated Nanofibre Display (BIND)
+            Our project uses the Biofilm-Integrated Nanofibre Display (BIND)
             strategy to engineer functional biofilm materials using the native
             curli system of Escherichia coli. BIND enables the extracellular
             display of genetically encoded peptide domains by fusing them to
@@ -226,9 +314,8 @@
           <figure>
             <img src="diagram_design.jpeg" alt="Image on BIND MECHANISM" />
             <figcaption class="figure">
-              <strong>Figure 2: </strong>Shows how the BIND mechanism expresses
-              CsgA- peptide fusion into engineered biofilm with programmable
-              functions
+              Figure 2: Shows how the BIND mechanism expresses CsgA- peptide
+              fusion into engineered biofilm with programmable functions
               <a href="https://doi.org/10.1038/ncomms5945 "
                 >(Nguyen et al., 2014)</a
               >
@@ -248,13 +335,12 @@
             assembly and functional display within the biofilm extracellular
             matrix. <br /><br />
             This BIND-based design enables material functionality to be encoded
-            directly in the genetic sequence, eliminating the need for external
-            modification steps during fiber formation. By using lysine-rich
-            peptide domains, we introduce tunable surface chemistry while
-            preserving robust curli assembly and biofilm formation. The
-            resulting system converts bacterial biofilms into living,
-            self-assembling materials with genetically programmable properties
-            (<a href="https://doi.org/10.1038/ncomms5945 "
+            directly in the genetic sequence, eliminates the need for external
+            modification steps during fiber formation. A lysine-rich region
+            ensures better binding and stability. The resulting system converts
+            bacterial biofilms into living, self-assembling materials with
+            genetically programmable properties (<a
+              href="https://doi.org/10.1038/ncomms5945 "
               >Nguyen et al., 2014</a
             >;
             <a href="https://doi.org/10.1038/nmat3912">Chen et al., 2014</a>).
@@ -328,52 +414,59 @@
             process.
           </p>
           <h2>References</h2>
-          <p>
-            Botyanszki, Z., Tay, P. K. R., Nguyen, P. Q., Nussbaumer, M. G., &
-            Joshi, N. S. (2015). Engineered catalytic biofilms: Site-specific
-            enzyme immobilization onto E. coli curli nanofibers. Biotechnology
-            and Bioengineering, 112(10), 2016-2024.
-            <a herf="https://doi.org/https://doi.org/10.1002/bit.25638"
-              >https://doi.org/https://doi.org/10.1002/bit.25638</a
-            >
-            <br />
-            Chen, A. Y., Deng, Z., Billings, A. N., Seker, U. O. S., Lu, M. Y.,
-            Citorik, R. J., Zakeri, B., & Lu, T. K. (2014). Synthesis and
-            patterning of tunable multiscale materials with engineered cells.
-            Nature Materials, 13(5), 515-523.<a
-              href="https://doi.org/10.1038/nmat3912"
-              >https://doi.org/10.1038/nmat3912</a
-            >
-            <br />
-            García, M. a. A., Hidouri, S., Little, J. M., Modafferi, D., Hao,
-            X., Chen, P., & Courchesne, N. D. (2024). Conductive MXene
-            nanosheets infused in protein fiber hydrogels for bioprinting and
-            thin film electrodes. Materials Advances, 5(17), 6873-6886.
-            <a href="https://doi.org/10.1039/d4ma00112e">
-              https://doi.org/10.1039/d4ma00112e</a
-            >
-            <br />
-            Lu, L. C., Wang, C. I., & Sye, W. F. (2011). Applications of
-            chitosan beads and porous crab shell powder for the removal of 17
-            organochlorine pesticides (OCPs) in water solution. Carbohydrate
-            Polymers, 83(4), 1984-1989.
-            <a href="https://doi.org/10.1016/j.carbpol.2010.11.003"
-              >https://doi.org/10.1016/j.carbpol.2010.11.003 </a
-            ><br />
-            Nguyen, P. Q., Botyanszki, Z., Tay, P. K. R., & Joshi, N. S. (2014).
-            Programmable biofilm-based materials from engineered curli
-            nanofibres. Nature Communications, 5(1), 4945.
-            <a href="https://doi.org/10.1038/ncomms5945"
-              >https://doi.org/10.1038/ncomms5945</a
-            >
-            <br />
-            Sivanathan, V., & Hochschild, A. (2012). Generating extracellular
-            amyloid aggregates using E. coli cells. Genes & Development, 26(23),
-            2659-2667.<a href="https://doi.org/10.1101/gad.205310.112"
-              >https://doi.org/10.1101/gad.205310.112</a
-            >
-            <br />
-          </p>
+          <ol>
+            <li>
+              Botyanszki, Z., Tay, P. K. R., Nguyen, P. Q., Nussbaumer, M. G., &
+              Joshi, N. S. (2015). Engineered catalytic biofilms: Site-specific
+              enzyme immobilization onto E. coli curli nanofibers. Biotechnology
+              and Bioengineering, 112(10), 2016-2024.
+              <a herf="https://doi.org/https://doi.org/10.1002/bit.25638"
+                >https://doi.org/https://doi.org/10.1002/bit.25638</a
+              >
+            </li>
+            <li>
+              Chen, A. Y., Deng, Z., Billings, A. N., Seker, U. O. S., Lu, M.
+              Y., Citorik, R. J., Zakeri, B., & Lu, T. K. (2014). Synthesis and
+              patterning of tunable multiscale materials with engineered cells.
+              Nature Materials, 13(5), 515-523.<a
+                href="https://doi.org/10.1038/nmat3912"
+                >https://doi.org/10.1038/nmat3912</a
+              >
+            </li>
+            <li>
+              García, M. a. A., Hidouri, S., Little, J. M., Modafferi, D., Hao,
+              X., Chen, P., & Courchesne, N. D. (2024). Conductive MXene
+              nanosheets infused in protein fiber hydrogels for bioprinting and
+              thin film electrodes. Materials Advances, 5(17), 6873-6886.
+              <a href="https://doi.org/10.1039/d4ma00112e">
+                https://doi.org/10.1039/d4ma00112e</a
+              >
+            </li>
+            <li>
+              Lu, L. C., Wang, C. I., & Sye, W. F. (2011). Applications of
+              chitosan beads and porous crab shell powder for the removal of 17
+              organochlorine pesticides (OCPs) in water solution. Carbohydrate
+              Polymers, 83(4), 1984-1989.
+              <a href="https://doi.org/10.1016/j.carbpol.2010.11.003"
+                >https://doi.org/10.1016/j.carbpol.2010.11.003
+              </a>
+            </li>
+            <li>
+              Nguyen, P. Q., Botyanszki, Z., Tay, P. K. R., & Joshi, N. S.
+              (2014). Programmable biofilm-based materials from engineered curli
+              nanofibres. Nature Communications, 5(1), 4945.
+              <a href="https://doi.org/10.1038/ncomms5945"
+                >https://doi.org/10.1038/ncomms5945</a
+              >
+            </li>
+            <li>
+              Sivanathan, V., & Hochschild, A. (2012). Generating extracellular
+              amyloid aggregates using E. coli cells. Genes & Development,
+              26(23), 2659-2667.<a href="https://doi.org/10.1101/gad.205310.112"
+                >https://doi.org/10.1101/gad.205310.112</a
+              >
+            </li>
+          </ol>
         </div>
       </div>
     </main>
