@@ -56,6 +56,19 @@ figure {
   text-align: center;
 }
 
+#content-hp h2,
+h3,
+h4,
+h5 {
+  font-family: "Saira Extra Condensed", sans-serif;
+}
+
+#content-hp h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
 header {
   position: sticky;
   top: 0;
