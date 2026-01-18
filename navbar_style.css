@@ -73,6 +73,14 @@ h5 {
   font-size: 1.3rem;
 }
 
+body.dark #content-hp {
+  background-color: var(--bg);
+}
+
+body.dark #content-hp a {
+  color: rgb(176, 218, 254);
+}
+
 header {
   position: sticky;
   top: 0;
@@ -218,7 +226,8 @@ body.dark #content a {
   color: rgb(176, 218, 254);
 }
 
-#content a:hover {
+#content a:hover,
+#content-hp a:hover {
   color: grey;
 }
 
