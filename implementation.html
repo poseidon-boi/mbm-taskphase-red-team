@@ -42,7 +42,6 @@
               <li><a href="description.html">Description</a></li>
               <li><a href="design.html">Design</a></li>
               <li><a href="proof-of-concept.html">Proof of Concept</a></li>
-              <li><a href="contributions.html">Contribution</a></li>
               <li><a href="engineering.html">Engineering</a></li>
               <li><a href="implementation.html">Implementation</a></li>
               <li><a href="safety.html">Safety</a></li>
@@ -115,100 +114,197 @@
       <div class="main-content">
         <div class="aside" id="aside"></div>
         <div id="content">
-          <h2>Introduction</h2>
+          <h2>System Overview</h2>
+
+          <h3>BioCOP’S Filter Implementation Plan</h3>
+
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            efficitur sapien in fringilla dapibus. Fusce commodo tincidunt
-            volutpat. Cras euismod ornare ornare. Donec elit sapien, sodales a
-            eros sed, tempus volutpat tellus. Cras at magna nisi. Vestibulum et
-            diam eu felis luctus posuere vitae non tortor. Vivamus at elit
-            commodo, rutrum tellus vel, volutpat tellus.
+            The BioCOP’S is a point-of-use filtration system designed to filter
+            organochlorine pesticides (OCPs) from contaminated water using
+            mechanical filtration and adsorption without breaking the pesticides
+            (Behera et al., 2024; Lu et al., 2011). The contaminated water
+            enters the system from the top, passing through a
+            curli-PETG-cellulose screen and then flowing through a bed of
+            MXene-coated chitosan beads. The filtered water then exits through a
+            lower outlet positioned at about 10°, which slows down the water and
+            allows it to interact with the filtration materials.
           </p>
+
+          <h3>Dual Use Research of Concern (DURC)</h3>
+
           <p>
-            ipsum sapien, vestibulum at ante non, euismod vehicula dui. Nunc
-            ornare tempor quam, sed scelerisque dolor. Vivamus sit amet
-            consequat felis, eu sollicitudin nulla. Phasellus id nisi quis erat
-            dictum aliquet. Vestibulum vulputate enim nec augue vulputate, et
-            interdum nunc ultricies. Ut lobortis quis diam ac accumsan. In
-            molestie tortor sed arcu vulputate tristique. In bibendum euismod
-            porta. Morbi ac venenatis erat. Curabitur consequat convallis purus
-            ac sagittis. Ut tempus ac erat at rutrum. Morbi dolor sapien,
-            fermentum nec ex et, ornare ullamcorper nisl.
+            The project does not involve the enhancement of pathogens, the
+            production of toxins, or genetic engineering related to virulence or
+            environmental competitiveness. The purpose is limited to the
+            physical adsorption and containment of the organochlorine pesticide.
+            The biological part is only used as a structural interface, thus
+            reducing the risk of misuse or dual use.
           </p>
+
+          <h2>Filter Architecture and Working</h2>
+
+          <h3>Curli–PETG–cellulose mesh (primary layer)</h3>
+
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            efficitur sapien in fringilla dapibus. Fusce commodo tincidunt
-            volutpat. Cras euismod ornare ornare. Donec elit sapien, sodales a
-            eros sed, tempus volutpat tellus. Cras at magna nisi. Vestibulum et
-            diam eu felis luctus posuere vitae non tortor. Vivamus at elit
-            commodo, rutrum tellus vel, volutpat tellus.
+            The Curli fibers are mixed with PBS and cellulose and cast over a
+            PETG scaffold to form a porous and strong mesh. Indeed, the
+            interaction between Curli and cellulose has been known to produce
+            adhesive biofilms and surface-associated matrices for E. coli
+            (Saldaña et al. 2009), and cellulose films and nanofibers have been
+            known to be used for strong supports that can be functionalized for
+            multifunctional interfaces (Muthoka et al. 2023, Ryu et al. 2018).
+            In BioCOP’S, it is the first filter that traps suspended particles
+            and distributes the flow before it goes to the adsorptive layer.
           </p>
+
+          <h3>MXene‑coated chitosan beads (adsorptive layer)</h3>
+
           <p>
-            Aenean ipsum sapien, vestibulum at ante non, euismod vehicula dui.
-            Nunc ornare tempor quam, sed scelerisque dolor. Vivamus sit amet
-            consequat felis, eu sollicitudin nulla. Phasellus id nisi quis erat
-            dictum aliquet. Vestibulum vulputate enim nec augue vulputate, et
-            interdum nunc ultricies. Ut lobortis quis diam ac accumsan. In
-            molestie tortor sed arcu vulputate tristique. In bibendum euismod
-            porta. Morbi ac venenatis erat. Curabitur consequat convallis purus
-            ac sagittis. Ut tempus ac erat at rutrum. Morbi dolor sapien,
-            fermentum nec ex et, ornare ullamcorper nisl.
+            At the bottom of the mesh, there is a bed of chitosan beads, whose
+            surfaces are clothed with MXene nanosheets. Chitosan beads are known
+            as flexible carriers and sorbents due to their substantial surface
+            area and rich amino chemistry (Şenel & Şahin, 2024), while
+            chitosan-based materials have been utilized in the capture of
+            various OCPs in water (Lu et al, 2011). With the addition of MXene
+            coatings, surface area is enhanced and tunable interfacial
+            properties are introduced; a number of these composite films and
+            coatings have also been explored for advanced interfacial and
+            multifunctional applications. In BioCOP'S, pesticides that have been
+            dissolved are adsorbed and retained onto the MXene-chitosan bead
+            surfaces without the actual breakdown of molecules chemically, which
+            is called removal.
           </p>
+          <p></p>
+
+          <h3>Hydraulics and differential pressure sensing</h3>
+
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            vitae erat eget nisi porttitor volutpat in quis nulla. Nunc
-            fringilla laoreet rhoncus. Quisque at euismod ante. Nam egestas et
-            libero ut blandit. In ullamcorper elementum varius. Vivamus vel
-            hendrerit lacus. Sed ultrices magna quis neque ornare vestibulum.
-            Nulla efficitur velit id nisl sagittis, venenatis elementum lorem
-            lobortis.
+            In the vertical configuration with the tilted outlet, the
+            gravitational force sustains the flow, reduces the dead zones, and
+            helps maintain equal contact time for the water with the layers. The
+            differential pressure sensor is positioned between the inlet and
+            outlet, measuring the changes in the value of the flow resistance
+            over time. An increase in the pressure drop indicates the presence
+            of solids on the curli mesh or bead packing. This increase is
+            measured and refers to the point when the cartridge needs to be
+            cleaned or replaced, just like the packed-bed and cartridges for the
+            filtration of pesticide contaminated water (Lu et al. 2011, Behera
+            et al. 2024).
           </p>
+
+          <h3>Operation, Cleaning, and Maintenance</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            vitae erat eget nisi porttitor volutpat in quis nulla. Nunc
-            fringilla laoreet rhoncus. Quisque at euismod ante. Nam egestas et
-            libero ut blandit. In ullamcorper elementum varius. Vivamus vel
-            hendrerit lacus. Sed ultrices magna quis neque ornare vestibulum.
-            Nulla efficitur velit id nisl sagittis, venenatis elementum lorem
-            lobortis.
+            In normal use, contaminated water is fed into the system at the
+            inlet and passes through the curli–PETG–cellulose mesh, followed by
+            passage through the MXene-coated chitosan bed, and finally comes out
+            of the system at the outlet. The values of water quality analysis
+            and differential pressure values help us understand how effectively
+            our filter is working (Behera et al., 2024; Lu et al., 2011). On
+            cleaning, we pass 70% ethanol through our filter system to clean the
+            curli mesh area and help desorb loosely adhered organics from our
+            adsorbing surface; ethanol and similar solvents are well-established
+            cleaning and regenerating agents for chitosan-based and
+            polymer-based systems
+            <a href="https://doi.org/10.1007/12_2024_183​"
+              >(Şenel & Şahin, 2024)</a
+            >. After ethanol treatment and water rinse, our system is ready for
+            use again. Eventually, a high pressure difference or poor water
+            quality indicates that our mesh and cartridge parts are ready for
+            replacement
+            <a
+              href="https://www.chemijournal.com/archives/2024/vol12issue2/PartA/12-2-17-482.pdf"
+              >(Behera et al., 2024;
+              <a href="https://doi.org/10.1016/j.carbpol.2010.11.003​"
+                >Lu et al., 2011</a
+              >)</a
+            >a.
           </p>
+
+          <h3>Material and Geometry Optimization</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            vitae erat eget nisi porttitor volutpat in quis nulla. Nunc
-            fringilla laoreet rhoncus. Quisque at euismod ante. Nam egestas et
-            libero ut blandit. In ullamcorper elementum varius. Vivamus vel
-            hendrerit lacus. Sed ultrices magna quis neque ornare vestibulum.
-            Nulla efficitur velit id nisl sagittis, venenatis elementum lorem
-            lobortis.
+            Optimizing the ratio of curli and cellulose, the PETG mesh
+            arrangement, the bead size, and the MXene concentration. This is
+            informed by methods used for polydopamine-functionalized cellulose
+            films and cutting-edge interfacial layer modifications
+            <a href=" https://doi.org/10.1007/s10570-023-05658-y"
+              >(Muthoka et al., 2023;<a
+                href="https://doi.org/10.1021/acsami.7b19865"
+              >
+                Ryu et al., 2018</a
+              >)</a
+            >, which help maximize the efficiency of the fluid distribution and
+            the fluid adsorption capacity.Pressure-based user guidance:
+            Establishment of differential ranges to help the user readily
+            distinguish between when to change, when to clean, and when to
+            replace, in accordance with regular maintenance and organophosphate
+            pesticide cleanup system principles (Lu et al., 2011 and Behera et
+            al., 2024).End-of-life and safety guidelines: Development of
+            guidelines for the end-of-life treatment of chitosan–MXene beads and
+            ethanol wash liquids as pesticide-contaminated waste, based upon
+            concerns over pesticide residues in Indian water bodies
+            <a
+              href="https://www.chemijournal.com/archives/2024/vol12issue2/PartA/12-2-17-482.pdf"
+              >(Behera et al.,<a
+                href="https://doi.org/10.1016/j.carbpol.2010.11.003​"
+                >2024; Lu et al., 2011</a
+              >)</a
+            >.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            vitae erat eget nisi porttitor volutpat in quis nulla. Nunc
-            fringilla laoreet rhoncus. Quisque at euismod ante. Nam egestas et
-            libero ut blandit. In ullamcorper elementum varius. Vivamus vel
-            hendrerit lacus. Sed ultrices magna quis neque ornare vestibulum.
-            Nulla efficitur velit id nisl sagittis, venenatis elementum lorem
-            lobortis.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            vitae erat eget nisi porttitor volutpat in quis nulla. Nunc
-            fringilla laoreet rhoncus. Quisque at euismod ante. Nam egestas et
-            libero ut blandit. In ullamcorper elementum varius. Vivamus vel
-            hendrerit lacus. Sed ultrices magna quis neque ornare vestibulum.
-            Nulla efficitur velit id nisl sagittis, venenatis elementum lorem
-            lobortis.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            vitae erat eget nisi porttitor volutpat in quis nulla. Nunc
-            fringilla laoreet rhoncus. Quisque at euismod ante. Nam egestas et
-            libero ut blandit. In ullamcorper elementum varius. Vivamus vel
-            hendrerit lacus. Sed ultrices magna quis neque ornare vestibulum.
-            Nulla efficitur velit id nisl sagittis, venenatis elementum lorem
-            lobortis.
-          </p>
-          <h2>Impact</h2>
+
+          <h2>Refrences</h2>
+          <ol>
+            <li>
+              Behera, B. C., Patel, A. K., Udgata, S. K., & Behera, B. (2024). A
+              review on pesticide contamination in Indian water bodies.
+              International Journal of Chemical Studies, 12(2), 37–46.<a
+                href="https://www.chemijournal.com/archives/2024/vol12issue2/PartA/12-2-17-482.pdf​"
+                >https://www.chemijournal.com/archives/2024/vol12issue2/PartA/12-2-17-482.pdf​</a
+              >
+            </li>
+            <li>
+              Lu, L. C., Wang, C. I., & Sye, W. F. (2011). Applications of
+              chitosan beads and porous crab shell powder for the removal of 17
+              organochlorine pesticides (OCPs) in water solution. Carbohydrate
+              Polymers, 83(4), 1984–1989.<a
+                href="https://doi.org/10.1016/j.carbpol.2010.11.003​"
+                >https://doi.org/10.1016/j.carbpol.2010.11.003​</a
+              >
+            </li>
+            <li>
+              Muthoka, R. M., Panicker, P. S., Agumba, D. O., & Kim, J. (2023).
+              Polydopamine nanocoating on cellulose nanofiber film and its
+              multifunctional behaviors. Cellulose, 31(2), 887–906.<a
+                href=" https://doi.org/10.1007/s10570-023-05658-y"
+                >https://doi.org/10.1007/s10570-023-05658-y​</a
+              >
+            </li>
+            <li>
+              Ryu, J. H., Messersmith, P. B., & Lee, H. (2018). Polydopamine
+              surface chemistry: A decade of discovery. ACS Applied Materials &
+              Interfaces, 10(9), 7523–7540
+              <a href="https://doi.org/10.1021/acsami.7b19865​"
+                >https://doi.org/10.1021/acsami.7b19865​</a
+              >
+            </li>
+            <li>
+              Saldaña, Z., Xicohtencatl‑Cortes, J., Avelino, F., Phillips, A.
+              D., Kaper, J. B., Puente, J. L., & Girón, J. A. (2009).
+              Synergistic role of curli and cellulose in cell adherence and
+              biofilm formation of attaching and effacing Escherichia coli and
+              identification of Fis as a negative regulator of curli.
+              Environmental Microbiology, 11(4), 992–1006.
+              <a href="https://doi.org/10.1111/j.1462-2920.2008.01824.x​"
+                >https://doi.org/10.1111/j.1462-2920.2008.01824.x​</a
+              >
+            </li>
+            <li>
+              Şenel, S., & Şahin, O. (2024). Chitosan beads for drug delivery.
+              In Advances in polymer science (pp. 117–142). Springer.
+              <a href="https://doi.org/10.1007/12_2024_183​"
+                >https://doi.org/10.1007/12_2024_183​</a
+              >
+            </li>
+          </ol>
         </div>
       </div>
     </main>

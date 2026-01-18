@@ -9,7 +9,7 @@
 
 .member-card {
   background: #111;
-  height: max-content;
+  height: 72rem;
   border-radius: 18px;
   display: flex;
   flex-direction: column;
